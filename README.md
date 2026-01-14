@@ -64,17 +64,19 @@ const GOOGLE_SCRIPT_URL = '你的_WEB_APP_URL_貼在這裡';
 
 ### 4. 自動化部署到 GitHub Pages (Deployment)
 
-本專案已設定好 GitHub Actions，只要將程式碼推送到 GitHub，就會自動部署。
+本專案已設定好 GitHub Actions，當你推送到 GitHub 時，它會自動建立一個 `gh-pages` 分支並部署。
 
 #### 設定步驟：
-1.  將本專案上傳到 GitHub Repository (建議命名為 `dividend-record`)。
-2.  進入 GitHub Repository 的 **Settings (設定)** > **Pages**。
-3.  在 **Build and deployment** > **Source** 選擇 **GitHub Actions**。
-4.  程式碼推送到 `main` 分支後，Actions 就會自動開始並部署。
-5.  部署完成後，你的網址通常會是：`https://<你的帳號>.github.io/dividend-record/`。
+1.  將本專案上傳到 GitHub Repository。
+2.  等待第一步驟的 Actions 執行完畢 (你可以到 Actions 分頁查看進度)。
+    *   *執行完畢後，你的 Repository 就會自動多出一個 `gh-pages` 分支。*
+3.  進入 **Settings (設定)** > **Pages**。
+4.  在 **Build and deployment** > **Source** 選擇 **Deploy from a branch** (來自依照分支部署)。
+5.  在 **Branch** 選擇 **`gh-pages`** 分支，並按 Save (儲存)。
+6.  部署完成後，上方會顯示你的網址，通常是：`https://<你的帳號>.github.io/dividend-record/`。
 
 **注意**：
-如果你的 Repository 名稱不是 `dividend-record`，請記得修改 `vite.config.js` 中的 `base` 設定：
+如果你的 Repository 名稱不是 `dividend-record`，記得修改 `vite.config.js` 中的 `base` 設定：
 
 ```javascript
 /* vite.config.js */
