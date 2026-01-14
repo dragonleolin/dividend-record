@@ -70,6 +70,7 @@ const GOOGLE_SCRIPT_URL = '你的_WEB_APP_URL_貼在這裡';
 1.  將本專案上傳到 GitHub Repository。
 2.  等待第一步驟的 Actions 執行完畢 (你可以到 Actions 分頁查看進度)。
     *   *執行完畢後，你的 Repository 就會自動多出一個 `gh-pages` 分支。*
+    *   **故障排除**：如果沒有出現，請檢查 Repository 的 **Actions** 分頁，看看是否失敗 (紅色叉叉)，或點進去查看錯誤訊息。也請確認你的主分支是 `main` 還是 `master` (程式碼已支援兩者)。
 3.  進入 **Settings (設定)** > **Pages**。
 4.  在 **Build and deployment** > **Source** 選擇 **Deploy from a branch** (來自依照分支部署)。
 5.  在 **Branch** 選擇 **`gh-pages`** 分支，並按 Save (儲存)。
