@@ -10,6 +10,23 @@
 
 ---
 
+## 🎯 架構策略 (Architecture Strategy)
+
+### 1. 專案動機 (解決什麼問題？)
+*   **痛點**： 一般記帳軟體太無聊，Excel 表格雖然強大但手機瀏覽不便且缺乏視覺回饋。
+*   **目標**： 想做一個「**看一眼就很開心**」的配息紀錄工具，把存股領息變成像「破關」一樣的成就感。
+
+### 2. 技術架構 (展現你的技術整合能力)
+*   **前端與部署**： 使用 **Vue 3** + **Vite** 開發，部署在 **GitHub Pages** (強調 Serverless、低成本)。
+*   **後端/資料庫**： 使用 **Google Sheets API** (透過 Apps Script) 作為輕量級資料庫 (Database as a Service)。
+*   **優勢**： 使用者（你自己）只要在熟悉的 Google Sheet 上輸入資料，網頁端就會自動連動更新，**不需要額外寫後台管理介面**，維護成本極低。
+
+### 3. 視覺與互動設計 (你的亮點)
+*   **風格**： 採用 **Pixel Art (像素風格)**，致敬 8-bit 電玩經典。
+*   **創意**： 將每一筆配息具象化為「**遊戲關卡**」或「**地圖節點**」，讓累積資產的過程可視化，增加互動樂趣。
+
+---
+
 ## 🚀 設定指南 (Setup Guide)
 
 ### 1. 前端安裝 (Frontend Installation)
@@ -102,6 +119,6 @@ export default defineConfig({
 7.  **備註**
 
 ## 🛠 技術棧
--   Vue 3 + Vite
--   Tailwind CSS (Pixel Art Config)
--   Google Apps Script
+-   **Frontend**: Vue 3, Vite, Tailwind CSS (Pixel Art Config)
+-   **Backend**: Google Apps Script (Serverless)
+-   **Database**: Google Sheets

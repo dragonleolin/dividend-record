@@ -88,22 +88,27 @@ onMounted(() => {
         <div v-if="currentView === 'home'" key="home" class="flex flex-col items-center gap-8">
           
           <!-- TREASURE CHEST (TOTAL) -->
-          <div class="relative group cursor-pointer animate-float">
+          <div class="group cursor-pointer animate-float mt-8 flex flex-col items-center relative">
+            
+            <!-- Total Display Bubble (Now on top relative) -->
+            <div class="bg-slate-800 border-2 border-white px-4 py-2 rounded-xl shadow-[4px_4px_0_0_black] z-20 mb-2 relative">
+              <div class="text-center">
+                <span class="text-xs text-gray-400 block mb-1">寶藏價值</span>
+                <span class="text-3xl text-yellow-400 text-shadow-sm font-bold tracking-wider">${{ totalDividends.toLocaleString() }}</span>
+              </div>
+              <!-- Speech Bubble Triangle -->
+              <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-800 border-b-2 border-r-2 border-white rotate-45"></div>
+            </div>
+
             <!-- Chest Icon Container -->
-            <div class="w-40 h-32 bg-slate-800 rounded-lg border-4 border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.5)] flex items-center justify-center relative z-0 overflow-visible">
+            <div class="w-48 h-40 bg-slate-800 rounded-lg border-4 border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.5)] flex items-center justify-center relative z-10 overflow-visible mt-2">
                
                <!-- Random GIF Image -->
                <img :src="currentChest" alt="Treasure" class="w-full h-full object-contain p-2 pixelated" />
                
                <!-- Coins overflow effect (Retained) -->
-               <div class="absolute -bottom-4 -right-4 text-4xl animate-bounce" style="animation-delay: 0.5s">💰</div>
-               <div class="absolute -bottom-4 -left-4 text-4xl animate-bounce" style="animation-delay: 0.2s">💰</div>
-            </div>
-            
-            <!-- Total Display Bubble -->
-            <div class="absolute -top-6 -right-16 bg-slate-800 border-2 border-white px-3 py-1 rounded shadow-[4px_4px_0_0_black] z-10 whitespace-nowrap">
-              <span class="text-xs text-gray-400 block">TOTAL WEALTH</span>
-              <span class="text-2xl text-yellow-400 text-shadow-sm font-bold">${{ totalDividends.toLocaleString() }}</span>
+               <div class="absolute -bottom-4 -right-6 text-4xl animate-bounce" style="animation-delay: 0.5s">💰</div>
+               <div class="absolute -bottom-4 -left-6 text-4xl animate-bounce" style="animation-delay: 0.2s">💰</div>
             </div>
           </div>
 
