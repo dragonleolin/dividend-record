@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import PixelWizard from './components/PixelWizard.vue'
+import InteractiveBackground from './components/InteractiveBackground.vue'
 import { CONFIG } from './config'
 import chestImg1 from './assets/Treasure.gif'
 import chestImg2 from './assets/TreasureF.gif'
@@ -71,10 +72,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="app-container min-h-screen bg-slate-900 text-white font-[DotGothic16] pb-10">
+  <InteractiveBackground />
+  <div class="app-container min-h-screen text-white font-[DotGothic16] pb-10">
     
     <!-- HEADER / LOGO -->
-    <header class="p-4 text-center border-b-4 border-slate-700 bg-slate-800 sticky top-0 z-10 shadow-lg">
+    <header class="p-4 text-center border-b-4 border-slate-700 bg-slate-800/90 backdrop-blur-sm sticky top-0 z-10 shadow-lg">
       <h1 class="text-2xl text-yellow-400 drop-shadow-[2px_2px_0_rgba(0,0,0,1)] flex items-center justify-center gap-2">
         <span class="text-3xl">💎</span>
         資產成長紀錄
@@ -194,7 +196,7 @@ onMounted(() => {
 /* Global Styles */
 body {
   margin: 0;
-  background-color: #0f172a; /* slate-900 */
+  /* background-color: #0f172a;  REMOVED: Let p5 background show */
 }
 
 /* Custom Scrollbar for Map Cards */

@@ -4,6 +4,7 @@
 
 ## ✨ 特色
 - 🎮 **復古美學**: 紅白機 (NES) 風格的像素藝術介面，搭配 `DotGothic16` 字體。
+- 🌌 **沉浸體驗**: 使用 **p5.js** 打造的動態像素粒子背景，營造復古數位空間感。
 - 🧙‍♂️ **冒險指引**: 由「遊戲大師 (Game Master)」引導你完成配息紀錄。
 - 📊 **Google Sheets 後端**: 資料安全地儲存在你自己的 Google 試算表中。
 - 📱 **行動裝置友善**: 在手機上操作就像在玩掌上型遊戲機。
@@ -18,6 +19,7 @@
 
 ### 2. 技術架構 (展現你的技術整合能力)
 *   **前端與部署**： 使用 **Vue 3** + **Vite** 開發，部署在 **GitHub Pages** (強調 Serverless、低成本)。
+*   **互動特效**： 整合 **p5.js** 實現 Canvas 級別的互動粒子背景，提升視覺質感與操作樂趣。
 *   **後端/資料庫**： 使用 **Google Sheets API** (透過 Apps Script) 作為輕量級資料庫 (Database as a Service)。
 *   **優勢**： 使用者（你自己）只要在熟悉的 Google Sheet 上輸入資料，網頁端就會自動連動更新，**不需要額外寫後台管理介面**，維護成本極低。
 
@@ -33,7 +35,7 @@
 請確認電腦已安裝 Node.js。
 
 ```bash
-# 安裝相依套件
+# 安裝相依套件 (包含 p5.js)
 npm install
 
 # 啟動本地開發伺服器
@@ -119,6 +121,6 @@ export default defineConfig({
 7.  **備註**
 
 ## 🛠 技術棧
--   **Frontend**: Vue 3, Vite, Tailwind CSS (Pixel Art Config)
+-   **Frontend**: Vue 3, Vite, Tailwind CSS (Pixel Art Config), **p5.js** (Interactive Background)
 -   **Backend**: Google Apps Script (Serverless)
 -   **Database**: Google Sheets
